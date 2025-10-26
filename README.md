@@ -1,2 +1,3 @@
-# SDev120
-Course work and resources for Software Development 120 - Ivy Tech - Fall 2025
+# Repository Directory
+
+SDev 120 - Computing Logic - Fall 2025 / 2nd 8 weeks
