@@ -1,0 +1,33 @@
+Write your answers and solution here
+1. x = 2
+
+2. either (x = x + 2) or (x += 2)
+
+3. Output("Please enter your monthly income: ")
+   Input monthly_income
+
+4. Output("Your montly income is: ", monthly_income)
+
+5. Output("Enter your number: ")
+   Input your_number
+   Output("Your number is: ", your_number)
+
+6. Output("Enter your 1st number: ")
+   Input num1
+   Output("Enter your 2nd number: ")
+   Input num2
+   sum = num1 + num2
+   Output("The sum is: ", sum)
+
+7. Output("Enter your 1st number: ")
+   Input num1
+   Output("Enter your 2nd number: ")
+   Input num2
+   product = num1 + num2
+   Output("The product is: ", product)
+
+8. The sum is:30
+
+9. The sum is:40
+
+10. Hi Davidyour grade is:90
