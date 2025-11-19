@@ -1,0 +1,37 @@
+//This program prompts the user to input two numbers
+//One for the length, and one for the width of a rectangle
+//I will then calculate and return the area of the rectangle with given dimensions
+
+//Main program - calculate_area()
+
+Start
+
+	Declarations
+		string calculation_message = "The area is: "
+		num length, width, area
+
+	length = get_length()
+	width = get_width()
+	area = length * width
+
+	Output(calculation_message, area)
+
+Stop
+
+//This program gets user input for length of a rectangle
+
+get_length():
+
+	Output("Enter a number for the rectangle's length: ")
+	Input length
+
+return length
+
+//This program gets user input for width of a rectangle
+
+get_width():
+
+	Output("Enter a number for the rectangle's the width: ")
+	Input width
+
+return width

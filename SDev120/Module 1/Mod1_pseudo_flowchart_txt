@@ -1,0 +1,16 @@
+"Write a program to get inputs from a user for 2 numbers
+Do the math and print the sum, difference, and product of the 2 numbers"
+
+Start
+
+	Output("Please enter a number: ")
+	Input num1
+	Output("Please enter another number: ")
+	Input num2
+	sum = num1 + num2
+	difference = num1 - num2
+	product = num1 * num2
+	Output("The sum is: ", sum)
+	Output("The difference is: ", difference)
+	Output("The product is: ", product)
+Stop
