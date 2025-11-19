@@ -1,0 +1,26 @@
+
+//This program takes in a customer's name, total calls made last month, and total call minutes last month, and determines whether that customer gets a 'normal' or a 'premium' rate
+
+Start
+
+    Declarations
+        string name, rate_type
+        num month_calls, month_minutes
+
+    Output("Enter customer name: ")
+    input name
+
+    Output("How many calls ", name, " made in the past month: ")
+    input month_calls
+
+    Output("How many minutes ", name, "used in the past month: ")
+    input month_minutes
+
+    if (month_calls > 200 AND month_minutes > 1000) then
+        rate_type = "premium"
+    else
+        rate_type = "normal"
+
+    Output(name," gets a ", rate_type, " rate.")
+
+Stop

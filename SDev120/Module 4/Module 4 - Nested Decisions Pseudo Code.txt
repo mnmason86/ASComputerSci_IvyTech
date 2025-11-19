@@ -1,0 +1,83 @@
+//This program collects a customer's name, phone number, and a number of text messages sent, and returns 
+//the customer's info and their calculated monthly texting fee.
+
+Start
+
+    Declarations
+
+    string name, phone_number
+    num number_of_texts, total_texting_fee,tax_rate
+    pretax_fee = 5.00
+
+    Output("Please enter your name:")
+    input name
+
+    Output("Please enter your phone number:")
+    input phone_number
+
+    Output("How many text messages did you send last month?")
+    input number_of_texts
+
+    if (number_of_texts > 100) then
+        pretax_fee += get_101_to_300_cost(number_of_texts)
+    
+    if (number_of_texts > 300) then
+        pretax_fee += get_301_to_1000_cost(number_of_texts)
+    
+    if (number_of_texts > 1000) then
+        pretax_fee += get_greater_than_1000_cost(number_of_texts)
+
+    total_texting_fee = pretax_fee * 1.07
+
+    Output ("Customer name: ", name)
+    Output ("Phone number ", phone_number)
+    Output ("Total texting charge: ", total_texting_fee)
+
+Stop
+    
+
+    //Modularization
+
+    //This module takes in a number of text messages, determines how many of them
+    //will cost 0.03, and returns the cost for those text messages
+
+    get_101_to_300_cost(number_of_texts){
+
+        Declarations
+            num texts_at_rate, rate_cost
+
+        if (number_of_texts < 300) then
+            texts_at_rate = number_of_texts - 100
+        else texts_at_rate = 200
+
+        rate_cost = texts_at_rate * .03
+        return rate_cost
+    }
+
+    //This module takes in a number of text messages, determines how many of them
+    //will cost 0.02, and returns the cost for those text messages
+
+    get_301_to_1000_cost(number_of_texts){
+
+        Declarations
+            num texts_at_rate, rate_cost;
+
+        if (number_of_texts < 1000) then
+            texts_at_rate = number_of_texts - 300
+        else texts_at_rate = 700 
+        rate_cost = texts_at_rate * .02
+        return rate_cost
+    }
+
+    //This module takes in a number of text messages, determines how many of them
+    //will cost 0.01, and returns the cost for those text messages
+
+    get_greater_than_1000_cost(number_of_texts){
+
+        Declarations
+            num texts_at_rate, rate_cost
+
+        texts_at_rate = number_of_texts - 1000
+        rate_cost = texts_at_rate * .01
+        return rate_cost
+    }
