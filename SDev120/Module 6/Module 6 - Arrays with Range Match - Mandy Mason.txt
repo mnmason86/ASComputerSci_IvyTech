@@ -1,0 +1,36 @@
+//This program gets a quantity of items from a user, determines the appropriate discounted rate,
+//then calculates the total cost with the discount (if any), and returns the total discount amount
+//and total cost after applying the discount
+
+
+Start
+
+    Declarations
+
+        num discounts[5] = 0, .05, .10, .15, .20
+        num quantity_limits[5] = 0, 11, 26, 51, 101
+        num SIZE, index, quantity, price, pre_disc_total, discount_total, total
+
+    Output("How many items would you like to purchase?")
+    input quantity
+    
+    while quantity < quantity_limits[index]:
+        index = index - 1
+    discount = discounts[index]
+
+    get_discount_total(discount, quantity)
+
+Stop    
+
+//This module takes in the discount rate and the quantity, and calculates the total discount and the total cost after 
+//discount, then returns those totals to the customer
+
+get_discount_total(discount, quantity)
+    price = 2.99
+    pre_disc_total = quantity * price
+    discount_total = pre_disc_total * discount
+    total = pre_disc_total - discount_total
+
+    Output("Total discount amount:", discount_total)
+    Output("Total cost after discount:", total)
+    return
