@@ -1,0 +1,21 @@
+//This program continuously prompts the user to enter a number until a 0 is entered, and tells the user if that number is positive or negative.
+
+Start
+
+    Declarations
+        num user_num = 1
+        str positive = "positive"
+        str negative = "negative"
+        str decision
+
+    while user_num != 0
+        Output("Enter a number")
+        input user_num
+
+        if user_num % 2 == 0 then
+            decision = positive
+        else decision = negative
+        Output("That's a {decision} number")
+    endwhile
+
+Stop

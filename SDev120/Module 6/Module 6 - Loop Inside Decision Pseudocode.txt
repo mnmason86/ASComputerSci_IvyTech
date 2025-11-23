@@ -1,0 +1,24 @@
+//This program asks if a user would like to play a 'Hello' game.
+//If they do, they will give a number and print 'Hello' that number of times
+
+Start
+
+    Declarations
+
+    string play
+    num num_responses
+    string hello = "Hello"
+
+    Output("Would you like to play a 'Hello' game?")
+    input play
+
+    if input = "yes" then  
+        Output("How many times would you like 'Hello' to be printed?")
+        input num_responses
+        
+        for num in num_responses:
+            num = num - 1
+            Output(hello)
+        end for 
+
+Stop
