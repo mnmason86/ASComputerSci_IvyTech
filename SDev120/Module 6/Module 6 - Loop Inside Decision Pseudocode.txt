@@ -16,8 +16,8 @@ Start
         Output("How many times would you like 'Hello' to be printed?")
         input num_responses
         
-        for num in num_responses:
-            num = num - 1
+        while num_responses > 0:
+            num_responses = num_responses - 1
             Output(hello)
         end for 
 
