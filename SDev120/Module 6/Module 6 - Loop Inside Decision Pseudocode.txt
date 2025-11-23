@@ -19,6 +19,6 @@ Start
         while num_responses > 0:
             num_responses = num_responses - 1
             Output(hello)
-        end for 
+        end while 
 
 Stop
