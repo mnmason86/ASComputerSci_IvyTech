@@ -5,9 +5,9 @@ Start
 
     Declarations
 
-    string play
-    num num_responses
-    string hello = "Hello"
+        string play
+        num num_responses
+        string hello = "Hello"
 
     Output("Would you like to play a 'Hello' game?")
     input play
