@@ -1,0 +1,79 @@
+Start
+
+	Declarations
+		
+		inputFile magic_data = "magic.dat"
+		inputFile super_data = "super.dat"
+		outputFile magic_super_data = "magic-super.dat"
+	
+		num m_cust_num, s_cust_num, m_sq_ft, s_sq_ft
+		str m_name, s_name, m_location, s_location
+		bool end_magic, end_super
+		bool end_both = False
+
+	open_and_read_files()
+	while end_both = False
+		merge_records()
+	endwhile
+	finish()
+
+Stop
+
+
+open_and_read_files()
+	open magic_data
+	open super_data
+	open magic_super_data
+
+	read_magic()
+	read_super()
+	check_end()
+
+return
+
+------
+
+read_magic()
+	input m_cust_num, m_name, m_location, m_sq_ft from magic_data
+	if eof then
+		end_magic = True
+	endwhile
+return
+
+-----
+
+read_super()
+	input s_cust_num, s_name, s_location, s_sq_ft from magic_data
+	if eof then
+		end_super = True
+	endwhile
+return
+
+-----
+
+check_end()
+	if end_magic = True AND end_super = True
+		end_both = True
+	endif
+return
+
+-----
+
+merge_records()
+	if magic_cust_num < super_cust_num then
+		output m_cust_num, m_name, m_location, m_sq_ft to magic_super_data
+		read_magic()
+	else
+		output s_cust_num, s_name, s_location, s_sq_ft to magic_super_data
+		read super()
+	endif
+	check_end()
+return
+
+-----
+
+finish()
+	close magic_data
+	close super_data
+	close magic_super_data
+return
