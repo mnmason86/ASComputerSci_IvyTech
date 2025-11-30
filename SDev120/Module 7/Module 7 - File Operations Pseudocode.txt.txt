@@ -1,0 +1,27 @@
+//This program reads and accesses data from the employee.dat file, calculates the gross pay for each employee, and saves eac employee's updated info in a new file named updatedemployee.dat
+
+Start
+
+Declarations    
+    InputFile employeeData = employee.dat
+    OutputFile updatedData = updatedemployee.dat
+    str first_name, last_name
+    num pay_rate, hours, gross_pay
+    list record[]
+
+//read_data()
+    open employeeData
+
+    while not end of file   
+        read current line
+        input first_name, last_name, pay_rate, hours
+        get_gross_pay()
+        add to list
+
+
+//write_data()
+
+Stop
+
+read_data() 
+
