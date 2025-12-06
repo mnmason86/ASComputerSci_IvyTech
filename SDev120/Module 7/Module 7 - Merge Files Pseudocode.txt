@@ -1,7 +1,6 @@
 //This program merges two files of customer records into one file containing all customers
 //in customer number order
 
-
 Start
 
 	Declarations
@@ -23,6 +22,9 @@ Start
 
 Stop
 
+------
+
+//This module opens all needed files and initiates the data-read sequence
 
 open_and_read_files()
 	open magic_data
@@ -37,6 +39,8 @@ return
 
 ------
 
+//This module reads from the magic.dat file containing the data for the Magic Cleaning Service
+
 read_magic()
 	input m_cust_num, m_name, m_location, m_sq_ft from magic_data
 	if eof then
@@ -45,6 +49,8 @@ read_magic()
 return
 
 -----
+
+//This module reads from the super.dat file containing the data for the Super Cleaning Service
 
 read_super()
 	input s_cust_num, s_name, s_location, s_sq_ft from magic_data
@@ -55,6 +61,8 @@ return
 
 -----
 
+//This module checks whether the end of both input files have been reached
+
 check_end()
 	if end_magic = True AND end_super = True
 		end_both = True
@@ -62,6 +70,10 @@ check_end()
 return
 
 -----
+
+//This module copies data from both input files into a single output file
+//while maintaining ascending numerical order based on the customer number
+//for each entry
 
 merge_records()
 	if magic_cust_num < super_cust_num then
@@ -75,6 +87,8 @@ merge_records()
 return
 
 -----
+
+//This module closes all open files
 
 finish()
 	close magic_data
